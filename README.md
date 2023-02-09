@@ -26,7 +26,7 @@ This tutorial observes various network traffic to and from Azure Virtual Machine
 - Create a Windows 10 Virtual Machine (VM)
 - While creating the VM, select the previously created Resource Group
 - While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
-- Create a Linux (Ubuntu) VM
+- Create a Linux Virtual Machine (Ubuntu)
 - While creating the VM, select the previously created Resource Group and Vnet
 - Observe Your Virtual Network within Network Watcher
 
@@ -67,3 +67,46 @@ Answer: Because the RDP (protocol) is constantly showing you a live stream from 
 
 
 <h2>Example Screenshots</h2>
+
+<p>
+<img src="https://i.imgur.com/hV7oWQ9.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Testing ICMP (Internet Control Message Protocol) traffic. VM1 is "pinging" V2's IP Address. The traffic is then displayed in the PowerShell command terminal and in WireShark.
+</p>
+
+
+<p>
+<img src="https://i.imgur.com/vazEJaH.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Testing SSH (Secure Shell) traffic. Remotely connecting to VM2 from VM1 using SSH.
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/XG2lkL0.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Testing DHCP (Dynamic Host Configuration Protocol) traffic. Pinging Azure to "forcefully" assign a new ip address to VM1 using DHCP and ipconfig /renew.
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/FemPPs2.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Testing DNS (Domain Name System) traffic. Using nslookup command to request DNS information for www.google.com.
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/ViPMtrN.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Testing RDP (Remote Desktop Protocol) traffic. Using WireShark to display the non-stop traffic of VM1 which is accesed remotely. The more it is used, the more traffic will be logged.
+</p>
+<br />
