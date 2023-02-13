@@ -10,8 +10,8 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop
-- Various Command-Line Tools
-- Various Network Protocols (SSH, RDP, DNS, DHCP, ICMP)
+- Various Command-Line Tools (PowerShell)
+- Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
@@ -21,7 +21,7 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 
 <h2>Testing Steps</h2>
 
-**Part 1(Create Resources)**
+**Part 1 (Create Resources)**
 - Create a Resource Group
 - Create a Windows 10 Virtual Machine (VM)
 - While creating the VM, select the previously created Resource Group
@@ -30,7 +30,7 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 - While creating the VM, select the previously created Resource Group and Vnet
 - Observe Your Virtual Network within Network Watcher (Check the Topology)
 
-**Part 2(Observe Traffic)**<p><br>ICMP Traffic</br></p>
+**Part 2 (Observe Traffic)**<p><br>ICMP Traffic</br></p>
 - Use Remote Desktop (Microsoft) to connect to your Windows 10 Virtual Machine
 - Within your Windows 10 Virtual Machine, download and install Wireshark
 - Open Wireshark and filter for ICMP traffic only
@@ -45,28 +45,53 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 - Stop the ping activity (Ctrl + C)
 
 SSH Traffic
-- Back in Wireshark, filter for SSH traffic only
+- Back in Wireshark, filter for SSH traffic only ('tcp.port == 22)
 - From your Windows 10 VM, "SSH into" your Ubuntu VM (via its private IP address)
 - Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark
 - Exit the SSH connection by typing 'exit' and pressing [Enter]
 
 DHCP Traffic
-- Back in Wireshark, filter for DHCP traffic only
+- Back in Wireshark, filter for DHCP traffic only ('udp.port == 67' or 'udp.port == 68')
 - From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
 - Observe the DHCP traffic appearing in WireShark
 
 DNS Traffic
-- Back in Wireshark, filter for DNS traffic only (or you can use 'udp.port == 53')
+- Back in Wireshark, filter for DNS traffic only ('tcp.port == 53' or 'udp.port == 53')
 - From your Windows 10 VM, within a command line, use nslookup to see what google.com and yahoo.com's IP addresses are
 - Observe the DNS traffic being shown in WireShark
 
 RDP Traffic
-- Back in Wireshark, filter for RDP traffic only (or you can use 'tcp.port == 3389')
+- Back in Wireshark, filter for RDP traffic only ('tcp.port == 3389')
 - Do you observe the immediate non-stop spam of traffic? Why do you think it is non-stop spamming versus only showing traffic when you do an activity?
 Answer: Because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefore traffic is always being transmitted
 
 
 <h2>Example Screenshots</h2>
+
+
+<p>
+<img src="https://i.imgur.com/rwRiCIC.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Azure creating the first (Windows 10) of two VMs needed.  
+</p>
+
+
+<p>
+<img src="https://i.imgur.com/EnEaXhD.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Checking the Topology in Network Watcher. Both VMs have already been created and use the same Resource Group and Vnet.
+</p>
+
+
+<p>
+<img src="https://i.imgur.com/6XJ5ABX.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+</P>
+<p>
+Within the Windows 10 VM, downloading and installing WireShark software.
+</p>
+
 
 <p>
 <img src="https://i.imgur.com/Eok69NH.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
@@ -89,7 +114,7 @@ Testing SSH (Secure Shell) traffic. Remotely connecting to VM2 from VM1 using SS
 <img src="https://i.imgur.com/r7KRdpd.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
-Testing DHCP (Dynamic Host Configuration Protocol) traffic. Pinging Azure to "forcefully" assign a new ip address to VM1 using DHCP and ipconfig /renew.
+Testing DHCP (Dynamic Host Configuration Protocol) traffic. Pinging Azure to "forcefully" assign a new IP Address to VM1 using DHCP and ipconfig /renew.
 </p>
 <br />
 
@@ -107,6 +132,6 @@ Testing DNS (Domain Name System) traffic. Using nslookup command to request DNS 
 <img src="https://i.imgur.com/HTljCTC.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
-Testing RDP (Remote Desktop Protocol) traffic. Using WireShark to display the non-stop traffic of VM1 which is accessed remotely. The more it is used, the more traffic will be logged.
+Testing RDP (Remote Desktop Protocol) traffic. Using WireShark to display the non-stop traffic of VM1 which is accessed remotely. The more it is active, the more traffic will be logged.
 </p>
 <br />
