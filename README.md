@@ -3,7 +3,7 @@
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-This tutorial observes various network traffic to and from Azure Virtual Machines with Wireshark, as well as experimenting with Network Security Groups. <br />
+This tutorial observes various network traffic to and from Azure Virtual Machines with WireShark, as well as experimenting with Network Security Groups. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -12,7 +12,7 @@ This tutorial observes various network traffic to and from Azure Virtual Machine
 - Remote Desktop
 - Various Command-Line Tools (PowerShell)
 - Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
-- Wireshark (Protocol Analyzer)
+- WireShark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
 
@@ -30,7 +30,7 @@ This tutorial observes various network traffic to and from Azure Virtual Machine
 - While creating the VM, select the previously created Resource Group and Vnet
 - Observe Your Virtual Network within Network Watcher (Check the Topology)
 
-**Part 2 (Download and Install Wireshark on Windows 10 VM)**
+**Part 2 (Download and Install WireShark on Windows 10 VM)**
 - Use Remote Desktop (Microsoft) to connect to your Windows 10 VM
 - Within your Windows 10 VM, download and install WireShark
 
