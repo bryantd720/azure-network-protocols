@@ -69,7 +69,7 @@ Answer: Because the RDP (protocol) is constantly showing you a live stream from 
 <h2>Example Screenshots</h2>
 
 <p>
-<img src="https://i.imgur.com/hV7oWQ9.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+<img src="https://i.imgur.com/Eok69NH.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
 Testing ICMP (Internet Control Message Protocol) traffic. VM1 is "pinging" VM2's Private IP Address. The traffic is then displayed in the PowerShell command terminal and in WireShark.
@@ -77,7 +77,7 @@ Testing ICMP (Internet Control Message Protocol) traffic. VM1 is "pinging" VM2's
 
 
 <p>
-<img src="https://i.imgur.com/vazEJaH.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+<img src="https://i.imgur.com/tB8st2S.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
 Testing SSH (Secure Shell) traffic. Remotely connecting to VM2 from VM1 using SSH.
@@ -86,7 +86,7 @@ Testing SSH (Secure Shell) traffic. Remotely connecting to VM2 from VM1 using SS
 
 
 <p>
-<img src="https://i.imgur.com/XG2lkL0.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+<img src="https://i.imgur.com/r7KRdpd.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
 Testing DHCP (Dynamic Host Configuration Protocol) traffic. Pinging Azure to "forcefully" assign a new ip address to VM1 using DHCP and ipconfig /renew.
@@ -95,7 +95,7 @@ Testing DHCP (Dynamic Host Configuration Protocol) traffic. Pinging Azure to "fo
 
 
 <p>
-<img src="https://i.imgur.com/FemPPs2.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+<img src="https://i.imgur.com/PdzpFxo.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
 Testing DNS (Domain Name System) traffic. Using nslookup command to request DNS information for www.google.com.
@@ -104,7 +104,7 @@ Testing DNS (Domain Name System) traffic. Using nslookup command to request DNS 
 
 
 <p>
-<img src="https://i.imgur.com/ViPMtrN.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
+<img src="https://i.imgur.com/HTljCTC.png" height="80%" width="80%" alt="Disk Sanitization Steps" />
 </P>
 <p>
 Testing RDP (Remote Desktop Protocol) traffic. Using WireShark to display the non-stop traffic of VM1 which is accessed remotely. The more it is used, the more traffic will be logged.
