@@ -19,7 +19,7 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 - Windows 10 (21H2)
 - Ubuntu Server 20.04
 
-<h2>High-Level Steps</h2>
+<h2>Testing Steps</h2>
 
 **Part 1(Create Resources)**
 - Create a Resource Group
