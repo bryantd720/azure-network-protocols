@@ -28,10 +28,10 @@ This tutorial observes various network traffic to and from Azure VMs with Wiresh
 - While creating the VM, allow it to create a new Virtual Network (Vnet) and Subnet
 - Create a Linux Virtual Machine (Ubuntu)
 - While creating the VM, select the previously created Resource Group and Vnet
-- Observe Your Virtual Network within Network Watcher via Azure portal
+- Observe Your Virtual Network within Network Watcher (Check the Topology)
 
 **Part 2(Observe Traffic)**<p><br>ICMP Traffic</br></p>
-- Use Remote Desktop to connect to your Windows 10 Virtual Machine
+- Use Remote Desktop (Microsoft) to connect to your Windows 10 Virtual Machine
 - Within your Windows 10 Virtual Machine, download and install Wireshark
 - Open Wireshark and filter for ICMP traffic only
 - Retrieve the private IP address of the Ubuntu VM from Azure portal and attempt to ping it from within the Windows 10 VM
